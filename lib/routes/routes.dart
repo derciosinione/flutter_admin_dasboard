@@ -3,7 +3,7 @@ const String driversPageRoute = "Drivers";
 const String clientsPageRoute = "Clients";
 const String authenticationPageRoute = "Authentication";
 
-List sideMenuItens = [
+List sideMenuItems = [
   overViwPageRoute,
   driversPageRoute,
   clientsPageRoute,
