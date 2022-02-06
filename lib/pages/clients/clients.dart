@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_dasboard/shared/widgets/custom_text.dart';
 
-class Clients extends StatelessWidget {
-  const Clients({ Key? key }) : super(key: key);
+class ClientsPage extends StatelessWidget {
+  const ClientsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return const Center(
+      child: CustomText(
+        text: "Clients",
+      ),
     );
   }
 }
