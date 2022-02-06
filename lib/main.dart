@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_dasboard/layout.dart';
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,20 +10,23 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: Scaffold(
-            appBar: AppBar(title: const Text("Flutter Web")),
-            body: const Center(child: Text("Welcome")),
-            floatingActionButton: ElevatedButton(
-              onPressed: () {},
-              child: const Icon(Icons.add),
-            )));
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Dasboard",
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        primaryColor: Colors.blue,
+        textTheme: GoogleFonts.mulishTextTheme(Theme.of(context).textTheme)
+            .apply(bodyColor: Colors.black),
+        pageTransitionsTheme: const PageTransitionsTheme(builders: {
+          TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
+          TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
+          TargetPlatform.windows: FadeUpwardsPageTransitionsBuilder(),
+        }),
+      ),
+      home: SiteLayout(),
+    );
   }
 }
