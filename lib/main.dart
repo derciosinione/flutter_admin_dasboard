@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           TargetPlatform.windows: FadeUpwardsPageTransitionsBuilder(),
         }),
       ),
-      home: SiteLayout(),
+      home: const SiteLayout(),
     );
   }
 }

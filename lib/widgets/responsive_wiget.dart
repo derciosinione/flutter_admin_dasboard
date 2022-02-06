@@ -9,14 +9,12 @@ class ResponsiveWiget extends StatelessWidget {
   final Widget largeScreen;
   final Widget? mediumScreen;
   final Widget? smallScreen;
-  final Widget? customScreen;
 
   const ResponsiveWiget({
     Key? key,
     required this.largeScreen,
     this.mediumScreen,
     this.smallScreen,
-    this.customScreen,
   }) : super(key: key);
 
   static double _widthSize(BuildContext context) =>
