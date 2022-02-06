@@ -6,7 +6,7 @@ class MenuController extends GetxController {
   var activeItem = overViwPageRoute.obs;
   var hoverItem = "".obs;
 
-  changeActiveItemTo(String itemName){
-    
+  changeActiveItemTo(String itemName) {
+    activeItem.value = itemName;
   }
 }
