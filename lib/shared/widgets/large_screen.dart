@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_dasboard/helpers/local_navigator.dart';
 import 'package:flutter_web_dasboard/shared/widgets/side_menu.dart';
 
 class LargeScreen extends StatelessWidget {
@@ -18,6 +19,7 @@ class LargeScreen extends StatelessWidget {
               color: Colors.white,
               borderRadius: BorderRadius.only(topLeft: Radius.circular(30)),
             ),
+            child: localNavigator(),
           ),
         ),
       ],
