@@ -53,15 +53,15 @@ class SideMenu extends StatelessWidget {
                       ? "Log Out"
                       : itemName,
                   onTap: () {
+                    print("Derone");
                     if (itemName == authenticationPageRoute) {
                       // TODO go to authentication page
                     }
                     if (!menuController.isActive(itemName)) {
                       menuController.changeActiveItemTo(itemName);
-                      if (ResponsiveWiget.isSmallScreen(context)) {
-                        Get.back();
-                        // TODO go to item name route
-                      }
+                      if (ResponsiveWiget.isSmallScreen(context)) Get.back();
+                      print("Got from side menu $itemName");
+                      navigationController.navigateTo(itemName);
                     }
                   }))
               .toList(),
