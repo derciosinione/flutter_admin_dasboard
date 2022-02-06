@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_dasboard/widgets/large_screen.dart';
 
 class SiteLayout extends StatelessWidget {
   const SiteLayout({Key? key}) : super(key: key);
@@ -6,25 +7,10 @@ class SiteLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-      ),
-      body: Row(
-        children: [
-          Expanded(
-            child: Container(
-              color: Colors.red,
-            ),
-          ),
-          Expanded(
-            flex: 5,
-            child: Container(
-              color: Colors.orange[300],
-            ),
-          ),
-        ],
-      ),
-    );
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.white,
+        ),
+        body: LargeScreen());
   }
 }
