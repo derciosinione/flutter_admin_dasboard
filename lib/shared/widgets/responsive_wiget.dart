@@ -28,7 +28,10 @@ class ResponsiveWiget extends StatelessWidget {
       _widthSize(context) < largeScreenSize;
 
   static bool isLargeScreen(BuildContext context) =>
-      _widthSize(context) >= smallScreenSize &&
+      _widthSize(context) >= largeScreenSize;
+
+  static bool isCustomSize(BuildContext context) =>
+      _widthSize(context) >= mediumScreenSize &&
       _widthSize(context) <= customScreenSize;
 
   @override
