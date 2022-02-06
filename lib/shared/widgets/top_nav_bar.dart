@@ -44,9 +44,29 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
                 ),
               ),
             ],
+          ),
+          Container(width: 1, height: 22, color: lightGrey),
+          const SizedBox(width: 24),
+          const CustomText(text: "Dercio Derone", color: lightGrey),
+          const SizedBox(width: 16),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(30),
+            ),
+            child: Container(
+              padding: const EdgeInsets.all(2),
+              margin: const EdgeInsets.all(2),
+              child: const CircleAvatar(
+                backgroundColor: light,
+                child: Icon(Icons.person_outline, color: dark),
+              ),
+            ),
           )
         ],
       ),
+      iconTheme: const IconThemeData(color: dark),
+      backgroundColor: Colors.transparent,
     );
 
 Widget getLeadingIcon(BuildContext context, GlobalKey<ScaffoldState> key) {
