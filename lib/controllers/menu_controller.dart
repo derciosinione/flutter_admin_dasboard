@@ -29,6 +29,7 @@ class MenuController extends GetxController {
       case clientsPageRoute:
         return _customIcon(Icons.people_alt_outlined, itemName);
       case authenticationPageRoute:
+      case "Log Out":
         return _customIcon(Icons.exit_to_app, itemName);
       default:
         return _customIcon(Icons.trending_up, itemName);

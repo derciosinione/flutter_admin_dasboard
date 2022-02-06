@@ -28,7 +28,7 @@ class SideMenu extends StatelessWidget {
                   SizedBox(width: _width / 48),
                   Padding(
                     padding: const EdgeInsets.only(right: 12),
-                    child: Image.asset(AppImages.logo),
+                    child: Image.asset(AppImages.logo, width: 40),
                   ),
                   const Flexible(
                     child: CustomText(
@@ -41,31 +41,31 @@ class SideMenu extends StatelessWidget {
                   SizedBox(width: _width / 48)
                 ],
               ),
-              const SizedBox(height: 40),
-              Divider(color: lightGrey.withOpacity(.1)),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: sideMenuItems
-                    .map((itemName) => SideMenuItem(
-                        itemName: itemName == authenticationPageRoute
-                            ? "Log Out"
-                            : itemName,
-                        onTap: () {
-                          if (itemName == authenticationPageRoute) {
-                            // TODO go to authentication page
-                          }
-                          if (!menuController.isActive(itemName)) {
-                            menuController.changeActiveItemTo(itemName);
-                            if (ResponsiveWiget.isSmallScreen(context)) {
-                              Get.back();
-                              // TODO go to item name route
-                            }
-                          }
-                        }))
-                    .toList(),
-              )
             ],
-          )
+          ),
+        const SizedBox(height: 40),
+        Divider(color: lightGrey.withOpacity(.1)),
+        Column(
+          mainAxisSize: MainAxisSize.min,
+          children: sideMenuItems
+              .map((itemName) => SideMenuItem(
+                  itemName: itemName == authenticationPageRoute
+                      ? "Log Out"
+                      : itemName,
+                  onTap: () {
+                    if (itemName == authenticationPageRoute) {
+                      // TODO go to authentication page
+                    }
+                    if (!menuController.isActive(itemName)) {
+                      menuController.changeActiveItemTo(itemName);
+                      if (ResponsiveWiget.isSmallScreen(context)) {
+                        Get.back();
+                        // TODO go to item name route
+                      }
+                    }
+                  }))
+              .toList(),
+        )
       ]),
     );
   }

@@ -66,7 +66,7 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
         ],
       ),
       iconTheme: const IconThemeData(color: dark),
-      backgroundColor: Colors.transparent,
+      backgroundColor: light,
     );
 
 Widget getLeadingIcon(BuildContext context, GlobalKey<ScaffoldState> key) {
