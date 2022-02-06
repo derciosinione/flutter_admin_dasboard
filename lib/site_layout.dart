@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dasboard/widgets/large_screen.dart';
-import 'package:flutter_web_dasboard/widgets/top_nav_bar.dart';
-import 'package:flutter_web_dasboard/widgets/responsive_wiget.dart';
 
-import 'widgets/small_screen.dart';
+import 'shared/widgets/large_screen.dart';
+import 'shared/widgets/responsive_wiget.dart';
+import 'shared/widgets/small_screen.dart';
+import 'shared/widgets/top_nav_bar.dart';
 
 class SiteLayout extends StatelessWidget {
   const SiteLayout({Key? key}) : super(key: key);
